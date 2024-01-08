@@ -1,0 +1,118 @@
+body {
+  font-family: "Kanit", sans-serif;
+}
+:root {
+  --main-color: #efb215;
+}
+.btnOncard {
+  background-color: #01adef;
+  border: none;
+  color: white;
+  padding: 4px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnOncard:hover {
+  opacity: 0.5;
+  background-color: #2cb7ee;
+  color: #fff;
+}
+
+.footer {
+  position: fixed;
+  height: 3.5rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0.2, 0.2);
+}
+.bg-logo {
+  background-color: #030712;
+}
+.bg-main {
+  background-color: var(--main-color);
+}
+.bg-runing {
+  background-color: #01adef;
+  box-shadow: 0 10px 8px 0 rgb(0 0 0 / 20%);
+}
+.text-xs {
+  font-size: 13px;
+}
+.cardPoind {
+  flex-direction: row;
+  background-color: var(--main-color);
+  border: 0;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
+}
+.cardgreet {
+  flex-direction: row;
+  background-color: var(--main-color);
+}
+.cardgreet .newrounded {
+  border-radius: 15px;
+}
+a{
+    text-decoration:none; 
+}
+.cardgreet img {
+  width: 100%;
+  margin: 0;
+}
+.imagecoupon{
+    height: 15vw;
+    object-fit: fill;
+}
+.cardPoind img {
+  max-width: 15%;
+  margin: 0;
+}
+.imageSlide {
+  height: 25vw;
+  object-fit: fill;
+}
+.newimage {
+  height: 10vw;
+  object-fit: fill;
+}
+
+@media screen and (max-width: 475px) {
+  .cardPoind {
+    font-size: 0.9em;
+  }
+  .newimage {
+    height: 25vw;
+    object-fit: fill;
+  }
+  .imagecoupon{
+    height: 100%;
+    object-fit: fill;
+}
+  .imageSlide {
+    height: 32vw;
+    object-fit: fill;
+  }
+  .btnOncard {
+    padding: 2px 2px;
+    text-align: center;
+    font-size: 12px;
+    margin: 5px 0px;
+  }
+  .imagePoint {
+    height: 35vw;
+    object-fit: fill;
+  }
+  .cardgreet img {
+    width: 100%;
+  }
+}
