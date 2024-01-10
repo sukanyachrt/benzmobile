@@ -55,6 +55,22 @@ body {
   border: 0;
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
 }
+.newbtnRound{
+  border-radius: 15px;
+  padding: 2px 30px;
+  
+}
+.textrotate {
+  transform: rotate(90deg) ;
+  -webkit-transform: rotate(90deg) ;
+  -moz-transform: rotate(90deg) ;
+  -o-transform: rotate(90deg) ;
+  -ms-transform: rotate(90deg) ;
+  white-space: nowrap;
+}
+.roundright{
+  border-radius: 0px 15px 15px 0px;
+}
 .cardgreet {
   flex-direction: row;
   background-color: var(--main-color);
@@ -69,6 +85,7 @@ a{
   width: 100%;
   margin: 0;
 }
+
 .imagecoupon{
     height: 15vw;
     object-fit: fill;
