@@ -78,6 +78,11 @@ body {
 .cardgreet .newrounded {
   border-radius: 15px;
 }
+.heading--text {
+        
+  transform: rotate(90deg);
+  white-space: nowrap
+}
 a{
     text-decoration:none; 
 }
