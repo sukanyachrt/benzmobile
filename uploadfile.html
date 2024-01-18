@@ -103,7 +103,7 @@
   <body>
     <div class="container">
       <h1 class="h4 text-center mb-3">Drag &amp; drop file upload example</h1>
-      <div class="alert alert-danger hidden" role="alert">sss</div>
+      <div class="alert alert-danger hidden" role="alert"></div>
       <div class="row">
         <div class="col-12">
           <form id="data-form">
@@ -262,7 +262,7 @@
           window.location.href = "index.html";
         },
         error: function (jqXHR, textStatus, errorThrown) {
-         $(".alert").text(`error : ${textStatus} ${errorThrown} `);
+         $(".alert").text(`${textStatus} ${errorThrown} `);
           $(".alert").show();
         },
       });
