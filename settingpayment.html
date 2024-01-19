@@ -43,118 +43,62 @@
   <body>
     <div class="container">
       <div class="row mt-4">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header text-center">
-              การตั้งค่าเกณฑ์ยอดใช้จ่ายในศูนย์บริการ & อะไหล่
-            </div>
-            <div class="card-body">
-              <div
-                class="alert alert-danger"
-                role="alert"
-                style="display: none"
-              ></div>
+        <form method="post" action="test.php">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header text-center h5 bg-primary text-white">
+                การตั้งค่าเกณฑ์ยอดใช้จ่ายในศูนย์บริการ & อะไหล่
+              </div>
+              <div class="card-body">
+                <div
+                  class="alert alert-danger"
+                  role="alert"
+                  style="display: none"
+                ></div>
 
-              <table class="table table-hover" id="tableSettingpayment">
-                <thead>
-                  <tr>
-                    <th scope="col">ชื่อ</th>
-                    <th scope="col">สี</th>
-                    <th scope="col">ยอดใช้จ่ายขั้นต่ำ</th>
-                    <th scope="col">ยอดใช้จ่ายขั้นสูง</th>
-                    <th scope="col" class="text-center">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-sm"
-                        onclick="addRow()"
-                      >
-                        <i class="fas fa fa-plus"></i>
-                        Add
-                      </button>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <input
-                        type="text"
-                        id="txtName"
-                        name="txtName"
-                        class="form-control"
-                        placeholder="ชื่อ"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        id="txtColor"
-                        name="txtColor"
-                        type="text"
-                        class="form-control colorsetting"
-                        value=""
-                        placeholder="สี"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        id="txtPaymentmin"
-                        name="txtPaymentmin"
-                        class="form-control"
-                        placeholder="ยอดใช้จ่ายขั้นต่ำ"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        id="txtPaymentmax"
-                        name="txtPaymentmax"
-                        class="form-control"
-                        placeholder="ยอดใช้จ่ายขั้นสูง"
-                      />
-                    </td>
-                    <td class="text-center">
-                      <button
-                        type="button"
-                        class="btn btn-dark btn-sm"
-                        onclick="removeRow(this)"
-                      >
-                        X
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="card-footer text-center">
+                <table class="table table-hover" id="tableSettingpayment">
+                  <thead>
+                    <tr>
+                      <th scope="col">ชื่อ</th>
+                      <th scope="col">สี</th>
+                      <th scope="col">ยอดใช้จ่ายขั้นต่ำ</th>
+                      <th scope="col">ยอดใช้จ่ายขั้นสูง</th>
+                      <th scope="col" class="text-center">
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-sm"
+                          onclick="addRow()"
+                        >
+                          <i class="fas fa fa-plus"></i>
+                          เพิ่ม
+                        </button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="card-footer text-center">
                 <a
-                href="javascript:history.back()"
-                type="button"
-                class="btn btn-secondary"
-              >
-                <i class="fas fa-arrow-left"></i>
-                ย้อนกลับ
-              </a>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onclick="ResetData()"
-              >
-                <i class="fas fa-undo"></i>
-                รีเซ็ต
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                onclick="saveData()"
-              >
-                <i class="fas fa-check"></i>
-                บันทึก
-              </button>
+                  href="javascript:history.back()"
+                  type="button"
+                  class="btn btn-secondary"
+                >
+                  <i class="fas fa-arrow-left"></i>
+                  ย้อนกลับ
+                </a>
+                <button type="reset" class="btn btn-secondary">
+                  <i class="fas fa-undo"></i>
+                  รีเซ็ต
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-check"></i>
+                  บันทึก
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-       
+        </form>
       </div>
     </div>
   </body>
@@ -178,108 +122,38 @@
 
   <script>
     $(function () {
-      $(".colorsetting").colorpicker();
+      addRow();
     });
-    //เพิ่มแถว
+
     function addRow() {
       var newRow = `<tr>
-        <td scope="row">
-            <input type="text" id="txtName" name="txtName" class="form-control" placeholder="ชื่อ">
-        </td>
-        <td>
-            <input id="txtColor"  name="txtColor" type="text"  class="form-control colorsetting"  value=""  placeholder="สี"/>
-        </td>
-        <td>
-            <input type="text" id="txtPaymentmin" name="txtPaymentmin" class="form-control" placeholder="ยอดใช้จ่ายขั้นต่ำ">
-        </td>
-        <td>
-            <input type="text" id="txtPaymentmax" name="txtPaymentmax" class="form-control" placeholder="ยอดใช้จ่ายขั้นสูง">
-        </td>
-        <td class="text-center">
-            <button type="button" class="btn btn-dark btn-sm" onclick="removeRow(this)">X</button>
-        </td>
-    </tr>`;
+          <td scope="row">
+              <input type="text" name="txtName[]" class="form-control" placeholder="ชื่อ">
+          </td>
+          <td>
+              <input name="txtColor[]" type="text" class="form-control colorsetting" value="" placeholder="สี"/>
+          </td>
+          <td>
+              <input type="number" name="txtPaymentmin[]" class="form-control" placeholder="ยอดใช้จ่ายขั้นต่ำ">
+          </td>
+          <td>
+              <input type="number" name="txtPaymentmax[]" class="form-control" placeholder="ยอดใช้จ่ายขั้นสูง" >
+          </td>
+          <td class="text-center">
+              <button type="button" class="btn btn-dark btn-sm" onclick="removeRow(this)">X</button>
+          </td>
+        </tr>`;
 
       $("#tableSettingpayment tbody").append(newRow);
       $(".colorsetting").colorpicker();
     }
 
-    //ลบแถว
     function removeRow(e) {
       if ($("#tableSettingpayment tbody tr").length === 1) {
         return;
       }
       var row = $(e).closest("tr");
       row.remove();
-    }
-    //reset data ทั้งหมด
-    function ResetData() {
-      $("#tableSettingpayment tbody").html("");
-      addRow();
-    }
-    //บันทึกข้อมูล
-    function saveData() {
-      var isValid = true;
-      $("#tableSettingpayment tbody tr").each(function () {
-        var inputs = $(this).find("input");
-
-        inputs.each(function (index) {
-          if (index === 4) {
-            return true;
-          }
-
-          if ($(this).val() === "") {
-            isValid = false;
-            return false;
-          }
-        });
-
-        if (!isValid) {
-          return false;
-        }
-      });
-
-      if (isValid) {
-        $(".alert").text("");
-        $(".alert").hide();
-        let tableSettingpayment = [];
-        $("#tableSettingpayment tbody tr").each(function () {
-          var nameSetting = $(this).find('td:eq(0) input[type="text"]').val();
-          var colorSetting = $(this).find('td:eq(1) input[type="text"]').val();
-          var minpaymentSetting = $(this)
-            .find('td:eq(2) input[type="text"]')
-            .val();
-          var maxpaymentSetting = $(this)
-            .find('td:eq(3) input[type="text"]')
-            .val();
-
-          tableSettingpayment.push({
-            nameSetting: nameSetting,
-            colorSetting: colorSetting,
-            minpaymentSetting: minpaymentSetting,
-            maxpaymentSetting: maxpaymentSetting,
-          });
-        });
-        $.ajax({
-          async: true,
-          url: "data.php?v=settingPayment",
-          type: "POST",
-          cache: false,
-          data: {
-            settingPayment: tableSettingpayment,
-          },
-          success: function (Res) {
-             window.location.href = "index.html";
-          },
-          error: function (jqXHR, textStatus, errorThrown) {
-            $(".alert").text(`${textStatus} ${errorThrown} `);
-            $(".alert").show();
-          },
-        });
-      } else {
-        $(".alert").show();
-        $(".alert").text("*** กรุณากรอกข้อมูลให้ครบทุกแถว ***");
-      }
     }
   </script>
 </html>
