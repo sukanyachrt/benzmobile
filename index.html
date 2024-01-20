@@ -354,8 +354,22 @@
     crossorigin="anonymous"
   ></script>
   <script>
-    function goTo_type_category(){
-      location.href="type_category.html"
+    $(function () {
+      getColor();
+    });
+
+    function goTo_type_category() {
+      location.href = "type_category.html";
+    }
+    function getColor() {
+      $.ajax({
+        async: true,
+        url: "data.php?v=getcolor",
+        type: "GET",
+        success: function (Res) {
+          document.documentElement.style.setProperty("--main-color", Res);
+        },
+      });
     }
   </script>
 </html>
