@@ -56,20 +56,19 @@ body {
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
 }
 
-.newbtnRound{
+.newbtnRound {
   border-radius: 15px;
   padding: 2px 30px;
-  
 }
 .textrotate {
-  transform: rotate(90deg) ;
-  -webkit-transform: rotate(90deg) ;
-  -moz-transform: rotate(90deg) ;
-  -o-transform: rotate(90deg) ;
-  -ms-transform: rotate(90deg) ;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   white-space: nowrap;
 }
-.roundright{
+.roundright {
   border-radius: 0px 15px 15px 0px;
 }
 .cardgreet {
@@ -80,26 +79,24 @@ body {
   border-radius: 15px;
 }
 .heading--text {
-        
   transform: rotate(90deg);
-  white-space: nowrap
+  white-space: nowrap;
 }
-a{
-    text-decoration:none; 
+a {
+  text-decoration: none;
 }
 .cardgreet img {
   width: 100%;
   margin: 0;
 }
 
-.imagecoupon{
-    height: 15vw;
-    object-fit: fill;
+.imagecoupon {
+  height: 15vw;
+  object-fit: fill;
 }
 .cardPoind img {
   background-color: #000;
   max-width: 80%;
-  
 }
 .imageSlide {
   height: 25vw;
@@ -113,25 +110,26 @@ a{
   background-color: #000;
   min-height: 100%;
 }
-
-
+.disable-card {
+  background-color: rgb(221, 220, 220);
+  opacity: 0.5;
+}
 @media screen and (max-width: 475px) {
   .cardPoind {
-
     font-size: 0.75em;
   }
-   .cardPoind img {
+  .cardPoind img {
     max-width: 15%;
     background-color: #000;
-  } 
+  }
   .newimage {
     height: 25vw;
     object-fit: fill;
   }
-  .imagecoupon{
+  .imagecoupon {
     height: 100%;
     object-fit: fill;
-}
+  }
   .imageSlide {
     height: 32vw;
     object-fit: fill;
@@ -143,7 +141,6 @@ a{
     margin: 5px 0px;
   }
   .imagePoint {
-    
     height: 18vh;
     object-fit: contain;
   }
@@ -151,4 +148,3 @@ a{
     width: 100%;
   }
 }
-
