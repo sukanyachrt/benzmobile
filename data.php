@@ -6,5 +6,5 @@ if ($data == "receiveData") {
     echo json_encode([$_POST,$_FILES]);
 }
 else if($data=="getcolor"){
-    echo json_encode("#E52121");
+    echo json_encode("#CD2ED5");
 }

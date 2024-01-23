@@ -55,6 +55,7 @@ body {
   border: 0;
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.18);
 }
+
 .newbtnRound{
   border-radius: 15px;
   padding: 2px 30px;
@@ -96,8 +97,9 @@ a{
     object-fit: fill;
 }
 .cardPoind img {
-  max-width: 15%;
-  margin: 0;
+  background-color: #000;
+  max-width: 80%;
+  
 }
 .imageSlide {
   height: 25vw;
@@ -107,11 +109,21 @@ a{
   height: 10vw;
   object-fit: fill;
 }
+.imagePoint {
+  background-color: #000;
+  min-height: 100%;
+}
+
 
 @media screen and (max-width: 475px) {
   .cardPoind {
-    font-size: 0.9em;
+
+    font-size: 0.75em;
   }
+   .cardPoind img {
+    max-width: 15%;
+    background-color: #000;
+  } 
   .newimage {
     height: 25vw;
     object-fit: fill;
@@ -131,10 +143,12 @@ a{
     margin: 5px 0px;
   }
   .imagePoint {
-    height: 35vw;
-    object-fit: fill;
+    
+    height: 18vh;
+    object-fit: contain;
   }
   .cardgreet img {
     width: 100%;
   }
 }
+
