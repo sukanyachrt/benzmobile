@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="rgb(72, 0, 179)" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="rgb(72, 0, 179)"
+    />
+    <title>BENZ</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+
+    <style></style>
+  </head>
+
+  <body>
+    <div class="col-12">
+      <div class="fixed-top">
+        <!-- logo benz -->
+        <nav class="navbar navbar-light p-2 bg-logo">
+          <div class="container-fluid">
+            <div
+              class="col-12 d-flex align-items-center justify-content-between"
+            >
+              <div class="col-2 text-white pt-2"></div>
+              <div class="col-8 text-center">
+                <a class="navbar-brand p-0" href="#">
+                  <img
+                    src="assets/images/logo.jpg"
+                    class="img-fluid"
+                    alt="Responsive Logo"
+                    style="max-height: 35px"
+                  />
+                </a>
+              </div>
+              <div class="col-2 text-white text-end text-xs">TH</div>
+            </div>
+          </div>
+        </nav>
+        <!-- Spacer -->
+        <div class="spacer"></div>
+        <!-- คูปองวันเกิด -->
+        <nav class="navbar navbar-light p-2 bg-runing text-white">
+          <div class="container-fluid">
+            <a
+              href="coupon_birthday.html"
+              class="text-white col-12 d-flex align-items-center justify-content-between"
+            >
+              <marquee direction="left" class="font-semibold text-md">
+                สุขสันต์วันเกิด กดที่นี่เพื่อรับคูปอง พิเศษสำหรับคุณ
+              </marquee>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 100px; margin-bottom: 250px">
+      <!-- -ข้อความแสดงจำนวนสิทธิ์ -->
+      <div class="row">
+        <div class="col-12 mb-4">
+          <div class="card mb-5">
+            <img
+              src="assets/images/usecoupon.jpg"
+              class="card-img-top"
+              alt="usecoupon"
+            />
+          </div>
+          <p class="card-title text-uppercase h5 text-muted">limousine car</p>
+          <p class="card-text textblood text-md">
+            สิทธมีจำนวนกำจัด 50 ท่านแรกต่อเดือน
+          </p>
+        </div>
+        <div class="col-12 my-4">
+          <p class="card-title h5 m-0 p-0 font-weight-bold">
+            รายการเมนูที่ได้รับ
+          </p>
+          <ul class="list-group list-group-flush m-0 p-0">
+            <li class="list-group-item text-uppercase text-xs">
+              limousine car
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 mt-4">
+          <p class="card-title text-md m-0 p-0">
+            อัตราการใช้บริการ หากเป็นลูกค้า loyalty +plus ส่วนลด 30%
+          </p>
+          <p class="card-title text-md m-0 p-0">ตามระยะทาง จากเรทปกติ</p>
+          <p class="card-title text-md m-0 p-0">
+            ## กม. 100.- เหลือ กม.ละ 70.-
+          </p>
+          <p class="card-title text-md m-0 p-0">## กม. 90.- เหลือ กม.ละ 53.-</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer Menu -->
+    <div class="fixed-bottom">
+      <div class="row mb-4 hidden showalert">
+        <div class="col-12">
+            <div class="alert alert-danger" role="alert"></div>
+        </div>
+      </div>
+      <div class="row mb-4" id="displayUsecoupon">
+        <div class="col-12">
+          <div class="text-center">
+            <div class="card-body">
+              <div class="card-text">
+                เมื่อกดใช้สิทธิแล้ว สิทธิจะมีอายุ 60 วินาที
+              </div>
+              <div class="card-text">กรุณาแสดงการใช้งานแสดงคูปองให้พนักงาน</div>
+              <button
+                class="mt-4 btn btn-dark btnUsecoupon"
+                onclick="useCoupon()"
+              >
+                ใช้งาน
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4 hidden" id="showStatuscoupon">
+        <div class="col-12 mt-4">
+          <section id="labels">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="dl">
+                    <div class="brand">
+                      <div class="text-sm font-weight-bold">ได้รับคูปอง</div>
+                    </div>
+                    <div class="showCoupon emerald"></div>
+                    <div
+                      class="showTime type text-center text-danger font-weight-bold"
+                    >
+                    นับเวลาถอยหลัง...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="row bg-main">
+        <div class="col-5 text-center text-white">
+          <a
+            aria-current="page"
+            class="d-flex flex-column align-items-center text-xs font-medium py-1 px-4 text-white flex-grow"
+            href="index.html"
+          >
+            <svg
+              width="25"
+              height="25"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+              ></path>
+            </svg>
+            <span class="">Home</span>
+          </a>
+        </div>
+        <div class="col-2 text-center">
+          <a
+            aria-current="page"
+            class="d-flex flex-column align-items-center text-xs font-medium py-0 px-4 text-white flex-grow"
+            href="exclusive.html"
+          >
+            <img
+              src="assets/images/benz.png"
+              width="60"
+              height="60"
+              style="margin-top: -25px; border: 4px solid"
+              class="rounded-circle border-white bg-main"
+            />
+            <span class="">Exclusive</span>
+          </a>
+        </div>
+
+        <div class="col-5 text-center text-white">
+          <div
+            aria-current="page"
+            class="d-flex flex-column align-items-center text-xs font-medium py-1 px-4 text-white flex-grow"
+            href="#"
+          >
+            <svg
+              width="25"
+              height="25"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+
+            <span class="">Contact me</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    let remainingTime = 60; // จำนวนวินาทีที่ต้องการถอยหลัง
+    let intervalId;
+    function useCoupon() {
+      $.ajax({
+        async: true,
+        url: "data.php?v=useCoupon",
+        type: "GET",
+        success: function (Res) {
+          $("#displayUsecoupon").hide();
+          if (Res.used == false) {
+            setInterval(countdown, 1000);
+            $(".showCoupon").text(Res.coupon_code);
+          } else if (Res.used == true) {
+            $(".showCoupon").text(
+              "มีการใช้งานคูปองหรือสิทธิเต็มแล้ว ไม่สามารถใช้คูปองได้อีก"
+            );
+            $(".showTime").text(``);
+          }
+          $("#showStatuscoupon").show();
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          $(".alert").text(`${textStatus} ${errorThrown} `);
+          $(".showalert").show();
+        },
+      });
+    }
+
+    function countdown() {
+      $(".showTime").text(`เหลือเวลาอีก ${remainingTime} วินาที`);
+      if (remainingTime === 0) {
+        $(".showCoupon").text("คูปองหมดอายุแล้ว");
+
+        clearInterval(intervalId);
+      } else {
+        remainingTime--;
+      }
+    }
+  </script>
+</html>

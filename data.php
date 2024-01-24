@@ -8,3 +8,6 @@ if ($data == "receiveData") {
 else if($data=="getcolor"){
     echo json_encode("#CD2ED5");
 }
+else if($data=="useCoupon"){
+    echo json_encode(["coupon_code" => "CS0005","used"=>false]);
+}

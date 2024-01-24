@@ -114,6 +114,49 @@ a {
   background-color: rgb(221, 220, 220);
   opacity: 0.5;
 }
+.textblood {
+  color: #6e1313;
+}
+.btnUsecoupon {
+  border-radius: 20px;
+  padding: 10px 80px;
+}
+.hidden {
+  display: none;
+}
+
+.emerald {
+  background: #000;
+}
+
+.dl {
+  background: rgb(71, 177, 226);
+  padding: 10px 0;
+  border-radius: 20px;
+  position: relative;
+}
+
+.dl .brand {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.dl .showCoupon {
+  min-height: 20px;
+  position: relative;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 700;
+  color: #f1c40f;
+  padding: 10px 0px;
+}
+.dl .type {
+  font-weight: 700;
+  color: #f80505;
+}
+
 @media screen and (max-width: 475px) {
   .cardPoind {
     font-size: 0.75em;
