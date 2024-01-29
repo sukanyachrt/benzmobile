@@ -31,6 +31,10 @@
       rel="stylesheet"
     />
     <link href="../assets/css/custom.css" rel="stylesheet" />
+    <style>
+     
+
+    </style>
   </head>
 
   <body>
@@ -41,7 +45,7 @@
             <div class="card-header text-center h4 bg-primary text-white">
               สร้างแบนเนอร์
             </div>
-            <form method="post" action="test.php">
+            <form method="post" action="test.php" autocomplete="off">
               <div class="card-body">
                 <div class="row">
                   <div class="col-12">
@@ -55,10 +59,8 @@
                         <input
                           type="text"
                           class="form-control"
-                          id="name"
                           name="name"
                           placeholder="ชื่อแบนเนอร์"
-                          autocomplete="yes"
                         />
                       </div>
                     </div>
@@ -69,15 +71,38 @@
                         >รูปแบนเนอร์</label
                       >
                       <div class="col-sm-10">
-                        <div class="input-group">
-                          <input
-                            type="file"
-                            class="form-control"
-                            id="image"
-                            name="image"
-                            accept="image/png, image/jpg, image/jpeg"
-                          />
-                        </div>
+                        <section>
+                          <div class="preview-zone hidden mb-2">
+                            <div class="box box-solid">
+                              <div class="box-header with-border">
+                                <div type="button" class="btn btn-white text-primary position-relative">
+                                  Preview
+                                
+                                </div>
+                              </div>
+
+                              <div class="box-body position-relative">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="dropzone-wrapper">
+                            <div class="dropzone-desc">
+                              <i
+                                class="fas fa fa-cloud-download-alt fa-3x text-primary"
+                              ></i>
+                              <p class="text-primary">
+                                Choose an image file or drag it here.
+                              </p>
+                            </div>
+                            <input
+                              type="file"
+                              name="image"
+                              id="image"
+                              class="dropzone"
+                            />
+                          </div>
+                        </section>
                       </div>
                     </div>
                     <div class="form-group row mb-2">
@@ -90,10 +115,8 @@
                         <input
                           type="text"
                           class="form-control"
-                          id="url"
                           name="url"
                           placeholder="ลิ้งค์แบนเนอร์"
-                          autocomplete="yes"
                         />
                       </div>
                     </div>
@@ -104,15 +127,18 @@
                         >สถานะ</label
                       >
                       <div class="col-sm-10">
-                        <select class="form-control" id="status" name="status">
-                          <option value="">เลือกสถานะ</option>
-                          <option value="true" class="bg-success text-white">
-                            เปิดใช้งาน
-                          </option>
-                          <option value="false" class="bg-danger text-white">
-                            ปิดใช้งาน
-                          </option>
-                        </select>
+                        <label class="switch">
+                          <input
+                            type="checkbox"
+                            id="status"
+                            name="status"
+                            checked
+                          />
+                          <div class="slider round">
+                            <span class="true">เปิดใช้งาน</span>
+                            <span class="false">ปิดการใช้งาน</span>
+                          </div>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -140,20 +166,85 @@
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
     crossorigin="anonymous"
   ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"
+  ></script>
   <script>
-    $(document).ready(function () {
-      var selectElement = $("select");
+   
+    function readFile(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var htmlPreview =
+            '<img width="200" src="' +
+            e.target.result +
+            '" />' +
+            "<p>" +
+            input.files[0].name +
+            "</p>";
+          var wrapperZone = $(input).parent();
+          var previewZone = $(input).parent().parent().find(".preview-zone");
+          var boxZone = $(input)
+            .parent()
+            .parent()
+            .find(".preview-zone")
+            .find(".box")
+            .find(".box-body");
 
-      selectElement.change(function () {
-        var selectedOption = selectElement.find("option:selected");
-        selectElement.removeClass("bg-success bg-danger text-white");
+          wrapperZone.removeClass("dragover");
+          previewZone.removeClass("hidden");
+          boxZone.empty();
+          boxZone.append(htmlPreview);
+         
+        };
 
-        if (selectedOption.val() === "true") {
-          selectElement.addClass("bg-success text-white");
-        } else if (selectedOption.val() === "false") {
-          selectElement.addClass("bg-danger text-white");
-        }
-      });
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $(".dropzone").change(function () {
+      readFile(this);
     });
+
+    $(".dropzone-wrapper").on("dragover", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).addClass("dragover");
+    });
+
+    $(".dropzone-wrapper").on("dragleave", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $(this).removeClass("dragover");
+    });
+
+    $(".remove-preview").on("click", function () {
+      var boxZone = $(this).parents(".preview-zone").find(".box-body");
+      var previewZone = $(this).parents(".preview-zone");
+      var dropzone = $(this).parents(".form-group").find(".dropzone");
+      boxZone.empty();
+      previewZone.addClass("hidden");
+      dropzone.val("");
+     
+    });
+
+    loadData(
+      "https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80"
+    );
+
+    function loadData(imageUrl) {
+      $(".preview-zone .box-body").empty();
+
+      var htmlPreview = '<img width="200" src="' + imageUrl + '" />';
+      var previewZone = $(".preview-zone");
+      var boxZone = previewZone.find(".box").find(".box-body");
+      previewZone.removeClass("hidden");
+
+      boxZone.append(htmlPreview);
+    
+    }
+   
   </script>
 </html>
