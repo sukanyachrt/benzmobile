@@ -32,27 +32,7 @@
     />
     <link href="assets/css/custom.css" rel="stylesheet" />
 
-    <style>
-      .carousel-inner .carousel-item.active,
-      .carousel-inner .carousel-item-next,
-      .carousel-inner .carousel-item-prev {
-        display: flex;
-      }
-      @media (min-width: 768px) {
-        .carousel-inner .carousel-item-end.active,
-        .carousel-inner .carousel-item-next {
-          transform: translateX(25%);
-        }
-        .carousel-inner .carousel-item-start.active,
-        .carousel-inner .carousel-item-prev {
-          transform: translateX(-25%);
-        }
-      }
-      .carousel-inner .carousel-item-end,
-      .carousel-inner .carousel-item-start {
-        transform: translateX(0);
-      }
-    </style>
+    <style></style>
   </head>
 
   <body>
@@ -98,6 +78,7 @@
     </div>
     <div class="container" style="margin-top: 120px; margin-bottom: 100px">
       <!-- POINTS  -->
+      
 
       <div class="row">
         <div class="col-12 px-4">
@@ -132,76 +113,116 @@
         </div>
       </div>
       <!-- SLIDES  -->
-      <div class="row mx-auto my-auto justify-content-center mt-4">
-        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#recipeCarousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#recipeCarousel"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-          </div>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active" data-bs-interval="2000">
-              <div class="col-6">
-                <a href="#" class="card">
-                  <div class="card-img">
-                    <img
-                      src="assets/images/slide_1.jpg"
-                      class="img-fluid card-img-top imageSlide"
-                    />
+      <div class="row mt-4">
+        <div class="col-12 px-4">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-bs-ride="false"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card">
+                      <img
+                        class="img-fluid card-img-top imageSlide"
+                        src="assets/images/slide_1.jpg"
+                        alt="Dist Photo 1"
+                      />
+                    </div>
                   </div>
-                </a>
+                  <div class="col-6">
+                    <div class="card mb-2 position-relative">
+                      <img
+                        class="img-fluid card-img-top imageSlide"
+                        src="assets/images/slide_2.jpg"
+                        alt="Dist Photo 2"
+                      />
+                      <div class="card-img-overlay">
+                        <div
+                          class="btnOncard d-inline-block position-absolute bottom-0"
+                        >
+                          OAB appointment
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card">
+                      <img
+                        src="https://source.unsplash.com/collection/190727/1600x900"
+                        class="card-img-top imageSlide"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="card">
+                      <img
+                        src="https://source.unsplash.com/collection/190727/1600x900"
+                        class="card-img-top imageSlide"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <div class="col-6">
-                <a href="#" class="card">
-                  <div class="card-img">
-                    <img
-                      src="assets/images/slide_2.jpg"
-                      class="img-fluid card-img-top imageSlide"
-                    />
-                  </div>
-                </a>
-              </div>
-            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <a
-            class="carousel-control-prev bg-transparent w-aut"
-            href="#recipeCarousel"
-            role="button"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </a>
-          <a
-            class="carousel-control-next bg-transparent w-aut"
-            href="#recipeCarousel"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </a>
         </div>
       </div>
-
       <!-- เลือกเมนูเพื่อใช้สิทธิ -->
       <div class="row mt-2">
         <div class="col-12 px-4">
           <div class="d-inline p-0 px-2 bg-info text-white"></div>
           <span class="ps-2">เลือกเมนูเพื่อใช้สิทธิ</span>
           <div class="row pt-3 g-4 text-center">
-            <a class="col-6 col-6 btn" href="type_category_disable.html">
+            <a class="col-6 col-md-3 btn" href="type_category_disable.html">
               <div class="card">
                 <img
                   class="card-img-top img-fluid newimage"
@@ -211,7 +232,7 @@
               </div>
               <h6 class="card-title pt-2">Food Drink</h6>
             </a>
-            <a class="col-6 col-6 btn" href="type_category_disable.html">
+            <a class="col-6 col-md-3 btn" href="type_category_disable.html">
               <div class="card">
                 <img
                   class="card-img-top newimage"
@@ -221,7 +242,7 @@
               </div>
               <h6 class="card-title p-2">Life style</h6>
             </a>
-            <a class="col-6 col-6 btn" href="type_category.html">
+            <a class="col-6 col-md-3 btn" href="type_category.html">
               <div class="card">
                 <img
                   class="card-img-top newimage"
@@ -231,7 +252,7 @@
               </div>
               <h6 class="card-title p-2">Vacation</h6>
             </a>
-            <a class="col-6 col-6 btn" href="type_category.html">
+            <a class="col-6 col-md-3 btn" href="type_category.html">
               <div class="card">
                 <img
                   class="card-img-top newimage"
@@ -333,20 +354,22 @@
     crossorigin="anonymous"
   ></script>
   <script>
-    let items = document.querySelectorAll(".carousel .carousel-item");
-
-    items.forEach((el) => {
-      const minPerSlide = 4;
-      let next = el.nextElementSibling;
-      for (var i = 1; i < minPerSlide; i++) {
-        if (!next) {
-          // wrap carousel by using first child
-          next = items[0];
-        }
-        let cloneChild = next.cloneNode(true);
-        el.appendChild(cloneChild.children[0]);
-        next = next.nextElementSibling;
-      }
+    $(function () {
+      getColor();
     });
+
+    function goTo_type_category() {
+      location.href = "type_category.html";
+    }
+    function getColor() {
+      $.ajax({
+        async: true,
+        url: "data.php?v=getcolor",
+        type: "GET",
+        success: function (Res) {
+          document.documentElement.style.setProperty("--main-color", Res);
+        },
+      });
+    }
   </script>
 </html>
