@@ -33,7 +33,7 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
 
     <style>
-      .divcontainer {
+         .divcontainer {
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -79,232 +79,330 @@
       .carousel-inner .carousel-item-start {
         transform: translateX(0);
       }
+
+     
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .user-card {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color);
+        border-radius: 10px;
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .user-card:before {
+        content: "";
+        position: absolute;
+        height: 300%;
+        width: 173px;
+        background: #262626;
+        top: -60px;
+        right: -20px;
+        z-index: 0;
+      }
+
+      .user-card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        margin-top: 5px;
+        margin-right: 100px;
+        margin-bottom: 0;
+        border-radius: 50%;
+        background-color: #fff;
+        width: 110px;
+        height: 110px;
+      }
+      
+
+      .user-card-img img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        background-color: #fff;
+       
+      }
+
+      .user-card-info {
+        text-align: left;
+      }
+
+       @media only screen and (max-width: 768px) {
+       
+        .user-card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 0;
+        width: 65px;
+        height: 65px;
+      }
+        .user-card-img img {
+          
+            width: 60px;
+        height: 60px;
+         
+        }
+        .user-card:before {
+       
+        width: 70px;
+       
+      }
+      .user-card .card-body {
+        padding: 0px 0px;
+      }
+      .f-p-c{
+        font-size: 14px;
+      }
+      
+
+      } 
+      
     </style>
   </head>
   <body>
     <div class="divcontainer">
       <div class="body outer">
         <div class="header">
-          <nav class="navbar navbar-light p-2 bg-logo">
-            <div class="container-fluid">
-              <div
-                class="col-12 d-flex align-items-center justify-content-between"
-              >
-                <div class="col-2 text-white pt-2"></div>
-                <div class="col-8 text-center">
-                  <a class="navbar-brand p-0" href="#">
-                    <img
-                      src="assets/images/logo.jpg"
-                      class="img-fluid"
-                      alt="Responsive Logo"
-                      style="max-height: 35px"
-                    />
-                  </a>
+            <nav class="navbar navbar-light p-2 bg-logo">
+              <div class="container-fluid">
+                <div
+                  class="col-12 d-flex align-items-center justify-content-between"
+                >
+                  <div class="col-2 text-white pt-2"></div>
+                  <div class="col-8 text-center">
+                    <a class="navbar-brand p-0" href="#">
+                      <img
+                        src="assets/images/logo.jpg"
+                        class="img-fluid"
+                        alt="Responsive Logo"
+                        style="max-height: 35px"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-2 text-white text-end text-xs">TH</div>
                 </div>
-                <div class="col-2 text-white text-end text-xs">TH</div>
               </div>
-            </div>
-          </nav>
-          <div class="spacer"></div>
-          <!-- คูปองวันเกิด -->
-          <nav class="navbar navbar-light p-2 bg-runing text-white">
-            <div class="container-fluid">
-              <a
-                href="coupon_birthday.html"
-                class="text-white col-12 d-flex align-items-center justify-content-between"
-              >
-                <marquee direction="left" class="font-semibold text-md">
-                  สุขสันต์วันเกิด กดที่นี่เพื่อรับคูปอง พิเศษสำหรับคุณ
-                </marquee>
-              </a>
-            </div>
-          </nav>
-        </div>
+            </nav>
+            <div class="spacer"></div>
+            <!-- คูปองวันเกิด -->
+            <nav class="navbar navbar-light p-2 bg-runing text-white">
+              <div class="container-fluid">
+                <a
+                  href="coupon_birthday.html"
+                  class="text-white col-12 d-flex align-items-center justify-content-between"
+                >
+                  <marquee direction="left" class="font-semibold text-md">
+                    สุขสันต์วันเกิด กดที่นี่เพื่อรับคูปอง พิเศษสำหรับคุณ
+                  </marquee>
+                </a>
+              </div>
+            </nav>
+          </div>
         <div class="body inner">
           <div class="container">
             <!-- POINTS  -->
             <div class="row mt-4">
               <div class="col-12 px-4">
-                <div class="card cardPoind rounded-lg align-items-center">
-                  <div class="card-body">
-                    <h5 class="card-title">พรชัย จิตต์ปรีชาญ</h5>
-                    <div class="row">
-                      <div class="col-5 pt-1">Gold 7</div>
-                      <h3 class="col-2 text-right text-white">|</h3>
-                      <div class="col-5 pt-1">2,256 POINTS</div>
-                    </div>
-                    <div class="col-12">
-                      <div class="progress">
-                        <div
-                          class="progress-bar bg-primary"
-                          style="width: 10%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-white"
-                          style="width: 0.2%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-primary"
-                          style="width: 10%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-white"
-                          style="width: 0.2%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-primary"
-                          style="width: 10%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-white"
-                          style="width: 0.2%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-primary"
-                          style="width: 10%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-white"
-                          style="width: 0.2%"
-                        ></div>
-                        <div
-                          class="progress-bar bg-primary"
-                          style="width: 10%"
-                        ></div>
+                <div class="wrapper">
+                  <div class="card user-card">
+                    <div class="user-card-info card-body">
+                      <h5 class="card-title">พรชัย จิตต์ปรีชาญ</h5>
+                      <div class="row">
+                        <div class="col-5 pt-1 f-p-c">Gold 7</div>
+                        <h3 class="col-1 text-right text-white">|</h3>
+                        <div class="col-5 pt-1 f-p-c">2,256 POINTS</div>
+                      </div>
+                      <div class="col-12">
+                        <div class="progress">
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 10%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-white"
+                            style="width: 0.2%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 10%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-white"
+                            style="width: 0.2%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 10%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-white"
+                            style="width: 0.2%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 10%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-white"
+                            style="width: 0.2%"
+                          ></div>
+                          <div
+                            class="progress-bar bg-primary"
+                            style="width: 10%"
+                          ></div>
+                        </div>
                       </div>
                     </div>
+                    <div class="user-card-img">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAM1BMVEUKME7///+El6bw8vQZPVlHZHpmfpHCy9Ojsbzg5ekpSmTR2N44V29XcYayvsd2i5yTpLFbvRYnAAAJcklEQVR4nO2d17arOgxFs+kkofz/154Qmg0uKsuQccddT/vhnOCJLclFMo+//4gedzcApf9B4srrusk+GsqPpj+ypq7zVE9LAdLWWVU+Hx69y2FMwAMGyfusLHwIpooyw9IAQfK+8naDp3OGHvZ0FMhrfPMgVnVjC2kABOQ1MLvi0DEIFj1ILu0LU2WjNRgtSF3pKb4qqtd9IHmjGlJHlc09IHlGcrQcPeUjTAySAGNSkQlRhCCJMGaUC0HSYUx6SmxFAtJDTdylsr4ApC1TY0yquKbCBkk7qnYVzPHFBHkBojhVJWviwgPJrsP4qBgTgbQXdsesjm4pDJDmIuswVZDdFx0ENTtkihoeqSDXD6tVxOFFBHndMKxWvUnzexpIcx/Gg2goJJDhVo6PCMGRAnKTmZuKm3wcJO/upphUqUHy29yVrRhJDORXOKIkEZDf4YiRhEF+iSNCEgb5KY4wSRDkB/yurUEG8nMcocgYABnvbrVL3nMIP0h/d5udKnwzSC/InfPdkJ6eWb0PJE++dyVVyQP5iQmWW27X5QG5druEKafBu0Hqu9saVOHa8HKC/K6BzHKZiRMEZCDF0Nd1/ZfXI/fcOibHOssFgokg9uFA20BhztHEAZIjIohrD/o1wljeFBDEwBo8YUt5Ir/rNLjOIACPFdy/AbEcPdcJBOCxytjeYAM4Kzp6rhOIPhRGNzwmFP3rOoTFI0irtnQKx6fj1Zt+h9njEUS9mKJxfFRrX5lt7wcQtaWTOfTHeIXVJQcQrRW+OYex2j0a66XZINoO8a7fPH2iHF2mC7ZBtB3Czb5QvjizSx7A3308mRzqAwujSywQbYfwc0iU8zqjS0yQ6ztEHX9332KCaGNIYB/Qq1z3yN0oDZBWyeFYJBCkm2sXLhDtpKFwNDMu5TnrZpYGiHbK4Nlwikg5DrYV1g6iPoJmzE5MKd/fOp53EPUaQZaLqH3u+vo2ELWp3wSyWuYGoj9EEIJoV3L9AUS/ZLsJpLNBXmqOu0CW6P5A/dx9IL0FAji/FYKot9EqE0Tvs6QBUe/2CxMEkZAlBNGPhdoAQWyTSmbxUwvUygwQyMmniAPgLt87CODXHuftWJIQgzrfQDC5AfwSgz9MmmG/gWCOqDgZ4JsQeTvZBoJJDhAFEsSDyxUEEUUekk0UEMhjBcEcGsoWVpBU3NcCgkkPkJWrKbdRZvULCMTWhYEdMrayBQRyqHcnSLmAIH7LcWJ8Hch7BsHEdWFpJsZjziCgFBpZ9TPm4e0XBJTTJKt9xjy8RoLI4gimPLP5goCSgWTrEcyzsy8IqmZVMo0H5bJiQToBCOjZ5RcElhjLN3dU7uQMAvoxwQkJZKI1CQzCthJYEigahHuDDi4rFwzCPQ7F1fiDQZgTR5iJwEGYRgIsiECD8BwwMAEfDcIaW8CRBQdhjS1kJQEchDEFhiRKr4KDFPS9FGQNVwEHoW83QjsEHdkfnuIOl6C1NjMItiaCaCWgbdpFJXQ9soh2uoB9aJcCxFdgZwlcrTmvENGlrITBBdpK25Qhd1F2RScq8CKu/gsCL8qN5THjy+Rr5E6joYgPxpdl518QrCf8Kpgjn6C8HLkbb+vt7ZM8wdVvy258khsRfHaS5DalDnlidZT7Erk+SXV5Bj1D3LS29XyhVJuoKHs9Q8S6reK11oUc7vPcr9uswP3SLiDINefXOF5rwCuGzVT6zVkVPfh2wWmHcz4wAwba2cgN1/Tsvleu7//i69CgVyt1GwjOs2+XK3rtbl151Tg3vOeioG40Mz2V+6pQ4xbJHOZj6g0EMxk93tV7fuedvVZpQSPhbwNBGInrymGrwNh1GXmL8F+lAaJ+NU/fzcmvJqvKj7177+1v1GY/GiBKI1Fdy/2XK6upXwaIJpI8B/399W0mH9zzafKaeCF9J0WF+jyCuFusTGzZKhFH8dVLZql2brxgcdVBKb7KG/7UZTmB3XJ6uL/QYT5ScRI74FcHEJ7feopyfGkaeaGlPoCw/BbjZmSBWIvINQNmTxdjWJqwUI8sztR4nYPuIPSTSUnOCZOE3ierqRoJfNSQxDjLEYs8i91eqgFCDSWiFHiuqAN9CwEGCPEISVjvwhS7Mfx6dtX8kC5aqvneGBOEFN2v6RBiYwr3DQOkLhEW6fHFbIwFQnkLiWYmZxE220z/aedPx99C+hiyKR4OzNFhg8S75CJTnxQ1dyugHTLaY10iu9dBpmhQtMz1ABLrkgtHVnRsPUO3OcU25i8cWdGxZbflCBKJqBdMs3aF/dYhNexU9RFcYEmLXYQKghyWdufyldBSU3KpjkKhZclxTXQGCTkL/HZDUIH5+Gkt4SgoCtj7pSYSNJLTK3VVRnmXZxebSMBIzmHABeIdXBebiN9eHYtUZ62ab3BdGkUm+SKJw1bdRXeewaX7qqdAnljg2sVxg3guAk3baofcg9yZ2eZpnHNvSFrEqhB9YPjesmt0pt6Xc8hl7W5L9Q4Xx09ctsrd5VhWeF6nF8SRrZdw49qns//0xTK/AZ8vGr3caTliuzeFNeCJTgafpKlhHd2WP1sy1LqDF798gjKJPLqDr9keoTd43+NyNzC1CI8Xy2lcPtOaVBI5IiAWyQ3e125AcKoXs2Djhy5eVc3KiBxREIPkhjBiLhIjU++4T91IbggjRiCJLSEIwWGddkEaxlVN5KCArPHk8mXVpHk8FHH7JL3n5dPA7C90q7XkeFJucacNmGXeRfswLE71HA79efaGiCN/Ofjmfmtcp8X10tIsqCacV5xfRWjNUiXGYbovWgyFYHcQLak15K9oM5zqmgaeKsHJetbSHfSPzXOiw/rxE9YH4CXaUpsZ0ztemFurP95Jpyvrd29YTpIZr7cEJHqfc7Wl0PFm2+yJR70udaokKFtGPTdm8WdQe24+HmVLlueboWQquBcYYVH2vEzfh8kCks1p90eWsLCyZ8qK7E86Oe+3XYFnBuiWdth20UqZR5SvMoyPg3WNauJipi0LMTQgVq5xUUlZcrPsopPHJ926z8pm7xyFLrH/PxpHSoXKdWgXsLn1scZn1ZDd/2vszN3lt254qkE+qu3yoqLM+ghN3Qz2qcVzUC/ZMFsK/alU6l0OWV/bQz6v6yYbyuN5BaZ4A7Y30vs/PPksS2+qzlvfF7OQmzzcL7W+xa7OIfRuVdtn/tdvdFLnL4OTKcm2W16PmWc4FWWXNSlWM2n3D+uPxuyrcfo74aP+Ac30a82+oLmfAAAAAElFTkSuQmCC"
+                        alt=""
+                      />
+                    </div>
                   </div>
-                  <img
-                    src="assets/images/img-benz.png"
-                    class="imagePoint rounded-lg"
-                    alt="..."
-                  />
                 </div>
               </div>
             </div>
             <!-- SLIDES  -->
             <div class="row mx-auto my-auto justify-content-center mt-4">
-              <div
-                id="recipeCarousel"
-                class="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#recipeCarousel"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#recipeCarousel"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button>
-                </div>
-                <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active" data-bs-interval="2000">
-                    <div class="col-6">
-                      <a href="#" class="card">
-                        <div class="card-img">
-                          <img
-                            src="assets/images/slide_1.jpg"
-                            class="img-fluid card-img-top imageSlide"
-                          />
-                        </div>
-                      </a>
+                <div
+                  id="recipeCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#recipeCarousel"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#recipeCarousel"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" data-bs-interval="2000">
+                      <div class="col-6">
+                        <a href="#" class="card">
+                          <div class="card-img">
+                            <img
+                              src="assets/images/slide_1.jpg"
+                              class="img-fluid card-img-top imageSlide"
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <div class="col-6">
+                        <a href="#" class="card">
+                          <div class="card-img">
+                            <img
+                              src="assets/images/slide_2.jpg"
+                              class="img-fluid card-img-top imageSlide"
+                            />
+                          </div>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <div class="col-6">
-                      <a href="#" class="card">
-                        <div class="card-img">
-                          <img
-                            src="assets/images/slide_2.jpg"
-                            class="img-fluid card-img-top imageSlide"
-                          />
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  class="carousel-control-prev bg-transparent w-aut"
-                  href="#recipeCarousel"
-                  role="button"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                </a>
-                <a
-                  class="carousel-control-next bg-transparent w-aut"
-                  href="#recipeCarousel"
-                  role="button"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                </a>
-              </div>
-            </div>
-            <!-- เลือกเมนูเพื่อใช้สิทธิ -->
-            <div class="row mt-2">
-              <div class="col-12 px-4">
-                <div class="d-inline p-0 px-2 bg-info text-white"></div>
-                <span class="ps-2">เลือกเมนูเพื่อใช้สิทธิ</span>
-                <div class="row pt-3 g-4 text-center">
-                  <a class="col-6 col-6 btn" href="type_category_disable.html">
-                    <div class="card">
-                      <img
-                        class="card-img-top img-fluid newimage"
-                        src="assets/images/menu_1.jpg"
-                        alt="Card image cap"
-                      />
-                    </div>
-                    <h6 class="card-title pt-2">Food Drink</h6>
+                  <a
+                    class="carousel-control-prev bg-transparent w-aut"
+                    href="#recipeCarousel"
+                    role="button"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
                   </a>
-                  <a class="col-6 col-6 btn" href="type_category_disable.html">
-                    <div class="card">
-                      <img
-                        class="card-img-top newimage"
-                        src="assets/images/menu_2.jpg"
-                        alt="Card image cap"
-                      />
-                    </div>
-                    <h6 class="card-title p-2">Life style</h6>
-                  </a>
-                  <a class="col-6 col-6 btn" href="type_category.html">
-                    <div class="card">
-                      <img
-                        class="card-img-top newimage"
-                        src="assets/images/menu_3.jpg"
-                        alt="Card image cap"
-                      />
-                    </div>
-                    <h6 class="card-title p-2">Vacation</h6>
-                  </a>
-                  <a class="col-6 col-6 btn" href="type_category.html">
-                    <div class="card">
-                      <img
-                        class="card-img-top newimage"
-                        src="assets/images/menu_4.jpg"
-                        alt="Card image cap"
-                      />
-                    </div>
-                    <h6 class="card-title p-2">limousine car</h6>
+                  <a
+                    class="carousel-control-next bg-transparent w-aut"
+                    href="#recipeCarousel"
+                    role="button"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
+             <!-- เลือกเมนูเพื่อใช้สิทธิ -->
+             <div class="row mt-2">
+                <div class="col-12 px-4">
+                  <div class="d-inline p-0 px-2 bg-info text-white"></div>
+                  <span class="ps-2">เลือกเมนูเพื่อใช้สิทธิ</span>
+                  <div class="row pt-3 g-4 text-center">
+                    <a class="col-6 col-6 btn" href="type_category_disable.html">
+                      <div class="card">
+                        <img
+                          class="card-img-top img-fluid newimage"
+                          src="assets/images/menu_1.jpg"
+                          alt="Card image cap"
+                        />
+                      </div>
+                      <h6 class="card-title pt-2">Food Drink</h6>
+                    </a>
+                    <a class="col-6 col-6 btn" href="type_category_disable.html">
+                      <div class="card">
+                        <img
+                          class="card-img-top newimage"
+                          src="assets/images/menu_2.jpg"
+                          alt="Card image cap"
+                        />
+                      </div>
+                      <h6 class="card-title p-2">Life style</h6>
+                    </a>
+                    <a class="col-6 col-6 btn" href="type_category.html">
+                      <div class="card">
+                        <img
+                          class="card-img-top newimage"
+                          src="assets/images/menu_3.jpg"
+                          alt="Card image cap"
+                        />
+                      </div>
+                      <h6 class="card-title p-2">Vacation</h6>
+                    </a>
+                    <a class="col-6 col-6 btn" href="type_category.html">
+                      <div class="card">
+                        <img
+                          class="card-img-top newimage"
+                          src="assets/images/menu_4.jpg"
+                          alt="Card image cap"
+                        />
+                      </div>
+                      <h6 class="card-title p-2">limousine car</h6>
+                    </a>
+                  </div>
+                </div>
+              </div>
         </div>
       </div>
       <div
