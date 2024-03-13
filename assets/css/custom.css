@@ -105,8 +105,7 @@ a {
   max-width: 80%;
 }
 .imageSlide {
-  height: 25vw;
-  object-fit: fill;
+  object-fit: cover;
 }
 .newimage {
   height: 10vw;

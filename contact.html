@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="rgb(72, 0, 179)" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="rgb(72, 0, 179)" />
+    <title>BENZ</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+
+    <style>
+        .divcontainer {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header,
+        .footer {
+            flex: none;
+            height: auto;
+
+        }
+
+        .body.outer {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .body.inner {
+            overflow-y: scroll;
+            flex: 1;
+            margin-bottom: 60px;
+        }
+
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+        }
+
+        @media (min-width: 768px) {
+
+            .carousel-inner .carousel-item-end.active,
+            .carousel-inner .carousel-item-next {
+                transform: translateX(25%);
+            }
+
+            .carousel-inner .carousel-item-start.active,
+            .carousel-inner .carousel-item-prev {
+                transform: translateX(-25%);
+            }
+        }
+
+        .carousel-inner .carousel-item-end,
+        .carousel-inner .carousel-item-start {
+            transform: translateX(0);
+        }
+
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .user-card {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--main-color);
+            border-radius: 10px;
+            padding: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .user-card:before {
+            content: "";
+            position: absolute;
+            height: 300%;
+            width: 173px;
+            background: #000;
+            top: -60px;
+            right: -20px;
+            z-index: 0;
+        }
+
+        .user-card-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+            margin-top: 5px;
+            margin-right: 100px;
+            margin-bottom: 0;
+            border-radius: 50%;
+            background-color: #fff;
+            width: 110px;
+            height: 110px;
+        }
+
+
+        .user-card-img img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: #fff;
+
+        }
+
+        .user-card-info {
+            text-align: left;
+        }
+
+        @media only screen and (max-width: 768px) {
+
+            .user-card-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 3;
+                margin-top: 10px;
+                margin-right: 10px;
+                margin-bottom: 0;
+                width: 65px;
+                height: 65px;
+            }
+
+            .user-card-img img {
+
+                width: 60px;
+                height: 60px;
+
+            }
+
+            .user-card:before {
+
+                width: 70px;
+
+            }
+
+            .user-card .card-body {
+                padding: 0px 0px;
+            }
+
+            .f-p-c {
+                font-size: 14px;
+            }
+
+            /* contact */
+            .content-text{
+                font-size: 1.3rem;
+            }
+
+        }
+
+        .card-img-top {
+            width: 65%;
+            border-radius: 50%;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        }
+
+        /* contact */
+
+        .contact-info-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             height: 100px;
+            width: 100px;
+            background-color: var(--main-color);
+            text-align: center;
+            border-radius: 50%;
+            margin: 20px auto;
+          
+        }
+        .contact-info-icon i {
+            font-size: 50px;
+            line-height: 100px;
+        }
+
+        .topic-text {
+            font-size: 3rem;
+            font-weight: 900;
+            
+        }
+        .content-text{
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .card-contact{
+            min-height: 320px;
+            justify-content: center;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="divcontainer">
+        <div class="body outer">
+            <div class="header">
+                <nav class="navbar navbar-light p-2 bg-logo">
+                    <div class="container-fluid">
+                        <div
+                  class="col-12 d-flex align-items-center justify-content-between"
+                >
+                  <div class="col-2 text-white pt-2"></div>
+                  <div class="col-8 text-center">
+                    <a class="navbar-brand p-0" href="#">
+                      <img
+                        src="assets/images/logo.jpg"
+                        class="img-fluid"
+                        alt="Responsive Logo"
+                        style="max-height: 35px"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-2 text-white text-end text-xs">TH</div>
+                </div>
+                    </div>
+                </nav>
+                <div class="spacer"></div>
+
+            </div>
+            <div class="body inner">
+                <div class="container">
+                    <!-- contact us -->
+
+                    <div class="row pt-3 g-4 d-flex flex-column align-items-center">
+                        <div class="col-12 col-md-12">
+                            <div class="container py-5">
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <h1 class="mb-5 topic-text">Contact Us</h1>
+                                        <div class="card card-contact shadow-lg rounded">
+                                            <div class="contact-info-icon">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </div>
+                                            <p class="text-black content-text mt-3">
+                                                เจ้าหน้าที่ลูกค้าสัมพันธ์เบนซ์ภูเก็ต​
+                                            </p>
+                                            <p class="text-black content-text mb-3">
+                                                ​Phone (082-683-4007)
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <div class="footer bg-main" style="
+              z-index: 99;
+              border-top-left-radius: 1rem;
+              border-top-right-radius: 1rem;
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+            ">
+            <div class="row">
+                <div class="col-5 text-center text-white">
+                    <a aria-current="page"
+                        class="d-flex flex-column align-items-center text-xs font-medium py-1 px-4 text-white flex-grow"
+                        href="index.html">
+                        <svg width="25" height="25" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z">
+                            </path>
+                        </svg>
+                        <span class="">Home</span>
+                    </a>
+                </div>
+                <div class="col-2 text-center">
+                    <a aria-current="page"
+                        class="d-flex flex-column align-items-center text-xs font-medium py-0 px-4 text-white flex-grow"
+                        href="exclusive.html">
+                        <img src="assets/images/benz.png" width="60" height="60"
+                            style="margin-top: -25px; border: 4px solid" class="rounded-circle border-white bg-main" />
+                        <span class="">Exclusive</span>
+                    </a>
+                </div>
+
+                <div class="col-5 text-center text-white">
+                    <a aria-current="page"
+                        class="d-flex flex-column align-items-center text-xs font-medium py-1 px-4 text-white flex-grow"
+                        href="contact.html">
+                        <svg width="25" height="25" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+
+                        <span class="">Contact me</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+</html>

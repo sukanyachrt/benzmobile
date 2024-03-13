@@ -1,250 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="rgb(72, 0, 179)" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="rgb(72, 0, 179)"
-    />
-    <title>BENZ</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="rgb(72, 0, 179)" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="rgb(72, 0, 179)" />
+  <title>BENZ</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link href="../assets/css/custom.css" rel="stylesheet" />
-    <style>
-     
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    </style>
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet" />
+  <link href="../assets/css/custom.css" rel="stylesheet" />
+  <style>
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 mt-4">
-          <div class="card border-primary">
-            <div class="card-header text-center h4 bg-primary text-white">
-              สร้างแบนเนอร์
-            </div>
-            <form method="post" action="test.php" autocomplete="off">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="form-group row mb-2">
-                      <label
-                        for="colFormLabelSm"
-                        class="col-sm-2 col-form-label"
-                        >ชื่อแบนเนอร์</label
-                      >
-                      <div class="col-sm-10">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="name"
-                          placeholder="ชื่อแบนเนอร์"
-                        />
-                      </div>
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mt-4">
+        <div class="card border-primary">
+          <div class="card-header text-center h4 bg-primary text-white">
+            สร้างแบนเนอร์
+          </div>
+          <form method="post" action="test.php" autocomplete="off">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group row mb-2">
+                    <label for="colFormLabelSm" class="col-sm-2 col-form-label">ชื่อแบนเนอร์</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="name" placeholder="ชื่อแบนเนอร์" />
                     </div>
-                    <div class="form-group row mb-2">
-                      <label
-                        for="colFormLabelSm"
-                        class="col-sm-2 col-form-label"
-                        >รูปแบนเนอร์</label
-                      >
-                      <div class="col-sm-10">
-                        <section>
-                          <div class="preview-zone hidden mb-2">
-                            <div class="box box-solid">
-                              <div class="box-header with-border">
-                                <div type="button" class="btn btn-white text-primary position-relative">
-                                  Preview
-                                
-                                </div>
-                              </div>
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label for="colFormLabelSm" class="col-sm-2 col-form-label">รูปแบนเนอร์</label>
+                    <div class="col-sm-10">
+                      <section>
+                        <div class="preview-zone hidden mb-2">
+                          <div class="box box-solid">
+                            <div class="box-header with-border">
+                              <div type="button" class="btn btn-white text-primary position-relative">
+                                Preview
 
-                              <div class="box-body position-relative">
-                                
                               </div>
                             </div>
-                          </div>
-                          <div class="dropzone-wrapper">
-                            <div class="dropzone-desc">
-                              <i
-                                class="fas fa fa-cloud-download-alt fa-3x text-primary"
-                              ></i>
-                              <p class="text-primary">
-                                Choose an image file or drag it here.
-                              </p>
+
+                            <div class="box-body position-relative">
+
                             </div>
-                            <input
-                              type="file"
-                              name="image"
-                              id="image"
-                              class="dropzone"
-                            />
                           </div>
-                        </section>
-                      </div>
-                    </div>
-                    <div class="form-group row mb-2">
-                      <label
-                        for="colFormLabelSm"
-                        class="col-sm-2 col-form-label"
-                        >ลิ้งค์แบนเนอร์</label
-                      >
-                      <div class="col-sm-10">
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="url"
-                          placeholder="ลิ้งค์แบนเนอร์"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-group row mb-2">
-                      <label
-                        for="colFormLabelSm"
-                        class="col-sm-2 col-form-label"
-                        >สถานะ</label
-                      >
-                      <div class="col-sm-10">
-                        <label class="switch">
-                          <input
-                            type="checkbox"
-                            id="status"
-                            name="status"
-                            checked
-                          />
-                          <div class="slider round">
-                            <span class="true">เปิดใช้งาน</span>
-                            <span class="false">ปิดการใช้งาน</span>
+                        </div>
+                        <div class="dropzone-wrapper">
+                          <div class="dropzone-desc">
+                            <i class="fas fa fa-cloud-download-alt fa-3x text-primary"></i>
+                            <p class="text-primary">
+                              Choose an image file or drag it here.
+                            </p>
                           </div>
-                        </label>
-                      </div>
+                          <input type="file" name="image" id="image" class="dropzone" />
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label for="colFormLabelSm" class="col-sm-2 col-form-label">ลิ้งค์แบนเนอร์</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="url" placeholder="ลิ้งค์แบนเนอร์" />
+                    </div>
+                  </div>
+                  <div class="form-group row mb-2">
+                    <label for="colFormLabelSm" class="col-sm-2 col-form-label">สถานะ</label>
+                    <div class="col-sm-10">
+                      <label class="switch">
+                        <input type="checkbox" id="status" name="status" checked />
+                        <div class="slider round">
+                          <span class="true">เปิดใช้งาน</span>
+                          <span class="false">ปิดการใช้งาน</span>
+                        </div>
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card-footer text-center">
-                <button type="reset" class="btn btn-secondary">
-                  <i class="fas fa-undo"></i>
-                  รีเซ็ต
-                </button>
-                <button type="submit" class="btn btn-primary">
-                  <i class="fas fa-check"></i>
-                  บันทึก
-                </button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div class="card-footer text-center">
+              <button type="reset" class="btn btn-secondary">
+                <i class="fas fa-undo"></i>
+                รีเซ็ต
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-check"></i>
+                บันทึก
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"
-  ></script>
-  <script>
-   
-    function readFile(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-          var htmlPreview =
-            '<img width="200" src="' +
-            e.target.result +
-            '" />' +
-            "<p>" +
-            input.files[0].name +
-            "</p>";
-          var wrapperZone = $(input).parent();
-          var previewZone = $(input).parent().parent().find(".preview-zone");
-          var boxZone = $(input)
-            .parent()
-            .parent()
-            .find(".preview-zone")
-            .find(".box")
-            .find(".box-body");
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+  integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+  integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
 
-          wrapperZone.removeClass("dragover");
-          previewZone.removeClass("hidden");
-          boxZone.empty();
-          boxZone.append(htmlPreview);
-         
-        };
+  function readFile(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        var htmlPreview =
+          '<img width="200" src="' +
+          e.target.result +
+          '" />' +
+          "<p>" +
+          input.files[0].name +
+          "</p>";
+        var wrapperZone = $(input).parent();
+        var previewZone = $(input).parent().parent().find(".preview-zone");
+        var boxZone = $(input)
+          .parent()
+          .parent()
+          .find(".preview-zone")
+          .find(".box")
+          .find(".box-body");
 
-        reader.readAsDataURL(input.files[0]);
+        wrapperZone.removeClass("dragover");
+        previewZone.removeClass("hidden");
+        boxZone.empty();
+        boxZone.append(htmlPreview);
+
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $(".dropzone").change(function () {
+    readFile(this);
+  });
+
+  $(".dropzone-wrapper").on("dragover", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).addClass("dragover");
+  });
+
+  $(".dropzone-wrapper").on("dragleave", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).removeClass("dragover");
+  });
+
+  $(".remove-preview").on("click", function () {
+    var boxZone = $(this).parents(".preview-zone").find(".box-body");
+    var previewZone = $(this).parents(".preview-zone");
+    var dropzone = $(this).parents(".form-group").find(".dropzone");
+    boxZone.empty();
+    previewZone.addClass("hidden");
+    dropzone.val("");
+
+  });
+
+  loadData(
+    "https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80"
+  );
+
+  function loadData(imageUrl) {
+    $(".preview-zone .box-body").empty();
+
+    var htmlPreview = '<img width="200" src="' + imageUrl + '" />';
+    var previewZone = $(".preview-zone");
+    var boxZone = previewZone.find(".box").find(".box-body");
+    previewZone.removeClass("hidden");
+
+    boxZone.append(htmlPreview);
+
+  }
+
+  $("#status").change(function () {
+
+    var isChecked = $(this).is(':checked');
+    var valueToSend = isChecked ? 1 : 0; // แปลงค่า true เป็น 1 และ false เป็น 0
+    $(this).val(valueToSend);
+
+    $.ajax({
+      url: "test.php",
+      method: "POST",
+      data: {
+        enable: valueToSend,
+       
+      },
+      success: function (response) {
+        // การตอบกลับจากเซิร์ฟเวอร์ (ถ้ามี)
+        console.log(response);
+      },
+      error: function (xhr, status, error) {
+        // กรณีเกิดข้อผิดพลาดในการส่งข้อมูล
+        console.error(error);
       }
-    }
-
-    $(".dropzone").change(function () {
-      readFile(this);
     });
 
-    $(".dropzone-wrapper").on("dragover", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $(this).addClass("dragover");
-    });
+  });
 
-    $(".dropzone-wrapper").on("dragleave", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $(this).removeClass("dragover");
-    });
+</script>
 
-    $(".remove-preview").on("click", function () {
-      var boxZone = $(this).parents(".preview-zone").find(".box-body");
-      var previewZone = $(this).parents(".preview-zone");
-      var dropzone = $(this).parents(".form-group").find(".dropzone");
-      boxZone.empty();
-      previewZone.addClass("hidden");
-      dropzone.val("");
-     
-    });
-
-    loadData(
-      "https://images.unsplash.com/photo-1485160497022-3e09382fb310?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80"
-    );
-
-    function loadData(imageUrl) {
-      $(".preview-zone .box-body").empty();
-
-      var htmlPreview = '<img width="200" src="' + imageUrl + '" />';
-      var previewZone = $(".preview-zone");
-      var boxZone = previewZone.find(".box").find(".box-body");
-      previewZone.removeClass("hidden");
-
-      boxZone.append(htmlPreview);
-    
-    }
-   
-  </script>
 </html>
